@@ -1,0 +1,25 @@
+# ========================
+# 忽略 Hugging Face / 大模型训练产出文件
+# ========================
+
+# 忽略微调保存的模型文件夹
+/LLMcode/02HF/my-lora-weights/
+/LLMcode/02HF/my-finetuned-model/
+/LLMcode/02HF/merged-model/
+/LLMcode/02HF/intent-purifier-lora/
+
+# 忽略一切可能的模型 checkpoint 和 safetensors 文件
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.h5
+*.onnx
+*.pkl
+
+# 忽略 HF 下载的本地缓存模型数据
+.cache/
+
+# 忽略本地生成的训练过程/中间数据集
+*.json
+sft_train.json
