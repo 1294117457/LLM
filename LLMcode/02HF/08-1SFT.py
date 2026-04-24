@@ -58,9 +58,8 @@ if tokenizer.pad_token is None:
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    # quantization_config=bnb_config,
     torch_dtype=torch.float16, 
-    device_map="auto",
+    device_map="cuda", # 修改这里，强行锁定第一张显卡
 )
 
 # ========================
